@@ -1,0 +1,26 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Panopticon
+tagline:             ""
+description:         "Hi! I'm Anup Ghatage. This is a blog of my experiments and ramblings."
+url:                 http://www.ghatage.com
+baseurl:             /
+paginate:            100
+
+# About/contact
+author:
+  name:              Anup Ghatage
+  url:               https://twitter.com/ghatageanup@gmail.com
+  email:             ghatageanup@gmail.com
+
+# Custom vars
+version:             1.0.0

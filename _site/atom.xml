@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Panopticon</title>
+ <link href="http://www.ghatage.com/atom.xml" rel="self"/>
+ <link href="http://www.ghatage.com/"/>
+ <updated>2015-03-31T09:47:01-07:00</updated>
+ <id>http://www.ghatage.com</id>
+ <author>
+   <name>Anup Ghatage</name>
+   <email>ghatageanup@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>It's Alive! Part 2</title>
+   <link href="http://www.ghatage.com/2015/03/28/its-alive-2/"/>
+   <updated>2015-03-28T00:00:00-07:00</updated>
+   <id>http://www.ghatage.com/2015/03/28/its-alive-2</id>
+   <content type="html">&lt;p&gt;I used to blog from as early as 2007 on blogspot.
+&lt;br&gt;A few years ago I migrated to wordpress.
+&lt;br&gt;I had signed up with a local firm which provided web space on their servers for my website.
+&lt;br&gt;It was OK, but they eventually didn&amp;#39;t provide 100% uptime.
+&lt;br&gt;Furthermore I got fed up of the constant updates from Wordpress and several of it&amp;#39;s features breaking due to no support for the newer versions.
+&lt;br&gt;A friend, Utkarsh Sinha suggested to try static website generators like Hugo or Jekyll. &lt;br&gt; I LOVED the idea.
+I started working on this website and to keep it really minimalistic. &lt;br&gt;That&amp;#39;s where another buddy of mine, Anay Joshi provided some invaluable insight on how to use Jekyll. There are some features about this website which are inspired from his rendition of the original Lanyon theme.
+Also hosting it on github pages is the icing on the cake.
+&lt;br&gt;Plus, I get to blog like a hacker from vi.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>It's Alive!</title>
+   <link href="http://www.ghatage.com/2015/03/28/its-alive/"/>
+   <updated>2015-03-28T00:00:00-07:00</updated>
+   <id>http://www.ghatage.com/2015/03/28/its-alive</id>
+   <content type="html">&lt;p&gt;I used to blog from as early as 2007 on blogspot.
+&lt;br&gt;A few years ago I migrated to wordpress.
+&lt;br&gt;I had signed up with a local firm which provided web space on their servers for my website.
+&lt;br&gt;It was OK, but they eventually didn&amp;#39;t provide 100% uptime.
+&lt;br&gt;Furthermore I got fed up of the constant updates from Wordpress and several of it&amp;#39;s features breaking due to no support for the newer versions.
+&lt;br&gt;A friend, Utkarsh Sinha suggested to try static website generators like Hugo or Jekyll. &lt;br&gt; I LOVED the idea.
+I started working on this website and to keep it really minimalistic. &lt;br&gt;That&amp;#39;s where another buddy of mine, Anay Joshi provided some invaluable insight on how to use Jekyll. There are some features about this website which are inspired from his rendition of the original Lanyon theme.
+Also hosting it on github pages is the icing on the cake.
+&lt;br&gt;Plus, I get to blog like a hacker from vi.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
