@@ -9,5 +9,5 @@ title: About
 
 ## You can catch me on
 
-* [GitHub](https://github.com/Ghatage/).
+* [GitHub](https://github.com/Ghatage/)
 * [Twitter](http://twitter.com/ghatageanup)
