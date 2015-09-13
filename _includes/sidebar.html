@@ -3,9 +3,13 @@
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"> 
 
 <!-- Toggleable sidebar -->
-
 <div class="sidebar" id="sidebar">
 	<div class="container sidebar-sticky">
+      <h1> <center>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a> </center>
+      </h1>
 	<div>
 		<img class="avatar" width=220 height=220 src="/img/avatar.jpg" alt="avatar" />
 	</div>
@@ -15,6 +19,7 @@
 
 	<nav class="sidebar-nav">
 		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+		<a class="sidebar-nav-item{% if page.url == '/blog/' %} active{% endif %}" href="/blog">Blog</a>
 
 		{% comment %}
 		The code below dynamically generates a sidebar nav of pages with

@@ -4,7 +4,7 @@
  <title>Panopticon</title>
  <link href="http://www.ghatage.com/atom.xml" rel="self"/>
  <link href="http://www.ghatage.com/"/>
- <updated>2015-04-13T20:20:43-07:00</updated>
+ <updated>2015-09-13T19:35:03-04:00</updated>
  <id>http://www.ghatage.com</id>
  <author>
    <name>Anup Ghatage</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>It's Alive!</title>
    <link href="http://www.ghatage.com/2015/03/28/its-alive/"/>
-   <updated>2015-03-28T00:00:00-07:00</updated>
+   <updated>2015-03-28T00:00:00-04:00</updated>
    <id>http://www.ghatage.com/2015/03/28/its-alive</id>
    <content type="html">&lt;p&gt;I used to blog from as early as 2007 on blogspot.
 &lt;br&gt;A few years ago I migrated to wordpress.
@@ -26,6 +26,258 @@
 I started working on this website and to keep it really minimalistic. &lt;br&gt;That&amp;#39;s where another buddy of mine, &lt;a href=&quot;http://anayjoshi.com&quot;&gt;Anay Joshi&lt;/a&gt; provided some invaluable insight on how to use Jekyll. There are some features about this website which are inspired from his rendition of the original Lanyon theme.
 Also hosting it on github pages is the icing on the cake.
 &lt;br&gt;Plus, I get to blog like a hacker from vi.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Make Pocketsphinx recognize new words</title>
+   <link href="http://www.ghatage.com/2012/12/13/Make-Pocketsphinx-recognize-new-words/"/>
+   <updated>2012-12-13T00:00:00-05:00</updated>
+   <id>http://www.ghatage.com/2012/12/13/Make-Pocketsphinx-recognize-new-words</id>
+   <content type="html">&lt;p&gt;Now that we’ve got &lt;a href=&quot;http://ghatage.com/2012/09/16/voice-to-text-pocketsphinx/&quot;&gt;pocketsphinx installed and running&lt;/a&gt;, we’d like for it to recognize the words we want it to.
+By default, the vocabulary and the dictionary it has may not cut it. in fact, if you’ve tried pocketsphinx_continuous you’ll understand that it cannot recognize half of the words you say.&lt;/p&gt;
+
+&lt;p&gt;Is it because of your accent?
+Is it because of your mic?
+There are many factors, but right now we’ll take a look at the quickest way for pocketsphinx to actually, quickly, recognize what you’re saying.&lt;/p&gt;
+
+&lt;p&gt;Let’s take a brief moment to understand what we’re going to do.&lt;/p&gt;
+
+&lt;p&gt;The three main arguments we give to pocketsphinx_continuous which may determine the accuracy are as follows&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  -hmm : The Acoustic Model
+  -lm : The Language Model
+  -dict : The Dictionary
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The Acoustic Model is created by taking audio of speech and the corresponding text transcription.
+Then statistical representations of the sounds that make up each word are created from this data to make the Acoustic Model.
+The default acoustic model we’ve seen in my last post, the one which comes with pocketsphinx is the most optimized and comprehensive.
+Hence, we don’t need to &lt;em&gt;create&lt;/em&gt; another acoustic model, we’ll just use the one we have.&lt;/p&gt;
+
+&lt;p&gt;The Language Model is actually a statistical language model which assigns probability to each word that it’s given using a probability distribution formula.&lt;/p&gt;
+
+&lt;p&gt;The Dictionary is the actual set of words which are given to the language model. The dictionary also represents how the words are pronounced.&lt;/p&gt;
+
+&lt;p&gt;So, since we’ll be using the default acoustic model, we can change the language model and the dictionary to add more, new words.&lt;/p&gt;
+
+&lt;p&gt;To do that, create a new file and add the words which you want to be specifically recognized, this will be the corpus:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;sample.txt
+
+Donut
+Chair
+Phone
+Car
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save it, and go to the following link: http://www.speech.cs.cmu.edu/tools/lmtool.html
+You can either use the tool in the given link, or, use the newer version mentioned there.
+Here we’ll use the one given on the page.&lt;/p&gt;
+
+&lt;p&gt;Select the corpus file you’ve created, here we’ve made ‘sample.txt‘.&lt;/p&gt;
+
+&lt;p&gt;Build the corpus by clicking on the ‘COMPILE KNOWLEDGE BASE’ button.&lt;/p&gt;
+
+&lt;p&gt;You’ll see this screen after it’s done.&lt;/p&gt;
+
+&lt;p&gt;Right click on the ‘Dictionary’ and ‘Language Model’ links and save the files. We’ll be giving these as arguments to pocketsphinx_continuous.&lt;/p&gt;
+
+&lt;p&gt;Ok, now fire up your terminal, set the LD&lt;em&gt;LIBRARY&lt;/em&gt;PATH if you haven’t added it to your .bashrc already and let’s get going!&lt;/p&gt;
+
+&lt;p&gt;As you will see here, it successfully recognizes the word ‘Car’ in the first attempt itself.&lt;/p&gt;
+
+&lt;p&gt;Also, it is able to recognize continuous speech when ‘Car, Donut, Phone’ are spoken out without pauses.&lt;/p&gt;
+
+&lt;p&gt;Now, you can use this method to build your own dictonary and make pocketsphinx recognize words that you want it to, with high accuracy.&lt;/p&gt;
+
+&lt;p&gt;Until then.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Voice to text using CMU Pocketsphinx</title>
+   <link href="http://www.ghatage.com/2012/09/16/voice-to-text-pocketsphinx/"/>
+   <updated>2012-09-16T00:00:00-04:00</updated>
+   <id>http://www.ghatage.com/2012/09/16/voice-to-text-pocketsphinx</id>
+   <content type="html">&lt;p&gt;We’ll need to install a bunch of things to get this working.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SphinxBase (This is required by PocketSphinx)&lt;/li&gt;
+&lt;li&gt;PocketSphinx (This is the library which we’ll use for audio to text)&lt;/li&gt;
+&lt;li&gt;SphinxTrain (This is used to train PocketSphinx to a local language/accent)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The installation is pretty straightforward. Just that it can make you cry at times.&lt;/p&gt;
+
+&lt;p&gt;It’s the dependencies that give you a problem than PocketSphinx itself.&lt;/p&gt;
+
+&lt;p&gt;Install the dependencies
+&lt;code&gt;
+sudo apt-get install libpulse-dev
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Download the tar’s for SphinxBase,PocketSphinx and SphinxTrain and put them in one directory and extract them there.&lt;br&gt;
+The installation steps are the same, but they should be installed in this order:&lt;br&gt;
+Sphinxbase, PocketSphinx and SphinxTrain.&lt;br&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/* Install Sphinxbase first */
+cd sphinxbase-0.8/ 
+
+./configure
+make
+sudo make install
+
+/* 
+** The sphinxbase will be installed in /usr/local/ folder. 
+** Not every system loads libraries from this folder automatically. 
+** It can be done by exporting the following environment variables:
+*/
+export LD_LIBRARY_PATH=/usr/local/lib
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+/*
+** It&amp;#39;s also a good idea to put it in your .bashrc
+*/
+
+/* Now install pocketpshinx */
+cd ../pocketsphinx-0.8/
+
+./configure
+make
+sudo make install
+
+/*
+** You have now successfully installed PocketSphinx. 
+** Let&amp;#39;s try it out by executing this command  
+*/
+
+pocketsphinx_continuous
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When you execute pocketsphinx_continuous it’ll show a bunch of things and then finally something like this:&lt;/p&gt;
+
+&lt;p&gt;Speak into your microphone and see the results!&lt;/p&gt;
+
+&lt;p&gt;Writing your own program using the API&lt;/p&gt;
+
+&lt;p&gt;Once the above installation steps are done,
+Here is a sample program off the CMU tutorial for pocketsphinx.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#include &amp;lt;pocketsphinx.h&amp;gt;
+
+int
+main(int argc, char *argv[])
+{
+    ps_decoder_t *ps;
+    cmd_ln_t *config;
+    FILE *fh;
+    char const *hyp, *uttid;
+    int16 buf[512];
+    int rv;
+    int32 score;
+
+    config = cmd_ln_init(NULL, ps_args(), TRUE,
+                 &amp;quot;-hmm&amp;quot;, MODELDIR &amp;quot;/hmm/en_US/hub4wsj_sc_8k&amp;quot;,
+                 &amp;quot;-lm&amp;quot;, MODELDIR &amp;quot;/lm/en/turtle.DMP&amp;quot;,
+                 &amp;quot;-dict&amp;quot;, MODELDIR &amp;quot;/lm/en/turtle.dic&amp;quot;,
+                 NULL);
+/*
+**  Alternatively, you can directly specify where the &amp;#39;hmm&amp;#39;, &amp;#39;dict&amp;#39; and &amp;#39;lm&amp;#39; files are
+**  by directly writing their absolute path as I&amp;#39;ve done below. 
+**  They&amp;#39;re in the extracted pocketsphinx-0.8 folder/model/
+**  What this will do is make your compilation command smaller but in return
+**  you can&amp;#39;t give it runtime locations for the hmm, lm and dict files
+**
+** config = cmd_ln_init(NULL, ps_args(), TRUE,               
+**               &amp;quot;-hmm&amp;quot;, &amp;quot;/home/anup/Stuff/pocketsphinx/pocketsphinx-0.8/model/hmm/en_US/hub4wsj_sc_8k&amp;quot;,
+**               &amp;quot;-lm&amp;quot;, &amp;quot;/home/anup/Stuff/pocketsphinx/pocketsphinx-0.8/model/lm/en/turtle.DMP&amp;quot;,
+**               &amp;quot;-dict&amp;quot;, &amp;quot;/home/anup/Stuff/pocketsphinx/pocketsphinx-0.8/model/lm/en/turtle.dic&amp;quot;,
+**               NULL);
+*/
+    if (config == NULL)
+        return 1;
+    ps = ps_init(config);
+    if (ps == NULL)
+        return 1;
+
+    fh = fopen(&amp;quot;goforward.raw&amp;quot;, &amp;quot;rb&amp;quot;);
+    if (fh == NULL) {
+        perror(&amp;quot;Failed to open goforward.raw&amp;quot;);
+        return 1;
+    }
+
+    rv = ps_decode_raw(ps, fh, &amp;quot;goforward&amp;quot;, -1);
+    if (rv &amp;lt; 0)
+        return 1;
+    hyp = ps_get_hyp(ps, &amp;amp;score, &amp;amp;uttid);
+    if (hyp == NULL)
+        return 1;
+    printf(&amp;quot;Recognized: %s\n&amp;quot;, hyp);
+
+        fseek(fh, 0, SEEK_SET);
+        rv = ps_start_utt(ps, &amp;quot;goforward&amp;quot;);
+    if (rv &amp;lt; 0)
+        return 1;
+        while (!feof(fh)) {
+            size_t nsamp;
+            nsamp = fread(buf, 2, 512, fh);
+            rv = ps_process_raw(ps, buf, nsamp, FALSE, FALSE);
+        }
+        rv = ps_end_utt(ps);
+    if (rv &amp;lt; 0)
+        return 1;
+    hyp = ps_get_hyp(ps, &amp;amp;score, &amp;amp;uttid);
+    if (hyp == NULL)
+        return 1;
+    printf(&amp;quot;Recognized: %s\n&amp;quot;, hyp);
+
+    fclose(fh);
+        ps_free(ps);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now you can compile this using the following command:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/* Compile the program */
+gcc -o hello_ps hello_ps.c &amp;#39;pkg-config --cflags --libs pocketsphinx sphinxbase&amp;#39;
+
+/*
+** Execute the binary
+** Make sure that the audio file &amp;#39;goforward.raw&amp;#39; is in the same 
+** directory as your program otherwise it&amp;#39;ll fail to execute.
+*/
+./hello_ps
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Quick Tip:
+```
+/* Your .bashrc can have these lines to make your life easier. */
+export LD&lt;em&gt;LIBRARY&lt;/em&gt;PATH=/usr/local/lib
+export PKG&lt;em&gt;CONFIG&lt;/em&gt;PATH=/usr/local/lib/pkgconfig&lt;/p&gt;
+
+&lt;p&gt;/*
+** Only if you&amp;#39;re going to hard code the hmm, lm and dict file paths
+** Like in the example
+*/
+gps()
+{
+    gcc -o $1.o $1 &amp;#39;pkg-config --cflags --libs pocketsphinx sphinxbase&amp;#39;
+}&lt;/p&gt;
+
+&lt;p&gt;/*
+** Now you can simply use the API by including the pocketsphinx header
+** and compile the program using the command &amp;#39;gps&amp;#39; 
+*/
+gps filename.c
+```&lt;/p&gt;
+
+&lt;p&gt;I had a comment from Nickolay Shmyrev explaining about the underlying framework of the audio subsystem on Linux.
+It was nice of him to take some time out and explain how it works, here is it for your reference as well.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Hello Anup &lt;br&gt;
+The installation process is not an issue if you understand the complexity of audio subsystems in Linux. The audio subsystem is complex unfortunately, but once you get it things will be easier. &lt;br&gt;
+Historically, audio subsystem is pretty fragmented. It includes the following major frameworks: &lt;br&gt;
+Old Unix-like DSP framework – everything is handled by the kernel-space driver. Applications interact with /dev/dsp device to produce and record audio &lt;br&gt;
+ALSA – newer audio subsystem, partially in kernel but also has userspace library libasound. ALSA also provides DSP compatibliity layer through snd&lt;em&gt;pcm&lt;/em&gt;oss driver which creates /dev/dsp device and emulates audio &lt;br&gt;
+Pulseaudio – even newer system which works on the top of libasound ALSA library but provides a sound server to centralize all the processing. To communicate with the library it also provides libpulse library which must be used by applications to record sound &lt;br&gt;
+Jack – another sound server, also works on the top of ALSA, provides anoher library libjack. Similar to Pulseaudio there are others not very popular frameworks, but sphinxbase doesn’t support them. Example are ESD (old GNOME sound server), ARTS (old KDE sound server), Portaudio (portable library usable across Windows, Linux and Mac). &lt;br&gt;
+The recommended audio framework on Ubuntu is pulseaudio. &lt;br&gt;
+Sphinxbase and pocketsphinx support all the frameworks and automatically selects the one you need in compile time. The highest priority is in pulseaudio framework. &lt;br&gt;
+Before you install sphinxbase you need to decide which framework to use. You need to setup the development part of the corresponding framework after that. &lt;br&gt;
+For example, it’s recommended to install libpulse-dev package to provide access to pulseaudio and after that sphinxbase will automatically work with Pulseaudio. Once you work with pulseaudio you do not need other frameworks. &lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
  </entry>
  
