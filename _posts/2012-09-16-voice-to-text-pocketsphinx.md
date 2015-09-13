@@ -155,31 +155,6 @@ gcc -o hello_ps hello_ps.c 'pkg-config --cflags --libs pocketsphinx sphinxbase'
 */
 ./hello_ps
 
-
-Here is what it will look like:
-
-Quick Tip:
-
-/* Your .bashrc can have these lines to make your life easier. */
-export LD_LIBRARY_PATH=/usr/local/lib
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-
-/*
-** Only if you're going to hard code the hmm, lm and dict file paths
-** Like in the example
-*/
-gps()
-{
-    gcc -o $1.o $1 'pkg-config --cflags --libs pocketsphinx sphinxbase'
-}
-
-/*
-** Now you can simply use the API by including the pocketsphinx header
-** and compile the program using the command 'gps' 
-*/
-gps filename.c
-
-
 I had a comment from Nickolay Shmyrev explaining about the underlying framework of the audio subsystem on Linux.
 It was nice of him to take some time out and explain how it works, here is it for your reference as well.
 
