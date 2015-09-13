@@ -66,6 +66,7 @@ Writing your own program using the API
 
 Once the above installation steps are done,
 Here is a sample program off the CMU tutorial for pocketsphinx.
+
 ```
 #include <pocketsphinx.h>
 
@@ -76,7 +77,7 @@ main(int argc, char *argv[])
 	cmd_ln_t *config;
 	FILE *fh;
 	char const *hyp, *uttid;
-        int16 buf[512];
+	int16 buf[512];
 	int rv;
 	int32 score;
 
