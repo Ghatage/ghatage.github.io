@@ -141,7 +141,9 @@ main(int argc, char *argv[])
 	return 0;
 }
 ```
+
 Now you can compile this using the following command:
+
 ```
 /* Compile the program */
 gcc -o hello_ps hello_ps.c 'pkg-config --cflags --libs pocketsphinx sphinxbase'
@@ -170,7 +172,6 @@ gps()
 {
     gcc -o $1.o $1 `pkg-config --cflags --libs pocketsphinx sphinxbase`
 }
-
 
 /*
 ** Now you can simply use the API by including the pocketsphinx header
