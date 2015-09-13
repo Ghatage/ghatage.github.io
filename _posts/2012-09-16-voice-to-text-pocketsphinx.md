@@ -144,7 +144,7 @@ main(int argc, char *argv[])
 Now you can compile this using the following command:
 ```
 /* Compile the program */
-gcc -o hello_ps hello_ps.c `pkg-config --cflags --libs pocketsphinx sphinxbase`
+gcc -o hello_ps hello_ps.c 'pkg-config --cflags --libs pocketsphinx sphinxbase'
 
 /*
 ** Execute the binary
