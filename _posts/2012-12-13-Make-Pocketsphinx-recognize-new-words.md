@@ -15,11 +15,13 @@ There are many factors, but right now we’ll take a look at the quickest way fo
 Let’s take a brief moment to understand what we’re going to do.
 
 The three main arguments we give to pocketsphinx_continuous which may determine the accuracy are as follows
+
 ```
   -hmm : The Acoustic Model
   -lm : The Language Model
   -dict : The Dictionary
 ```
+
 The Acoustic Model is created by taking audio of speech and the corresponding text transcription.
 Then statistical representations of the sounds that make up each word are created from this data to make the Acoustic Model.
 The default acoustic model we’ve seen in my last post, the one which comes with pocketsphinx is the most optimized and comprehensive.
