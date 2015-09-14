@@ -3,11 +3,16 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! I like computers, music, good books and magic.
-</p>
+Hey there! I'm Anup Ghatage. I love to code and to do sleight of hand magic.
+<br>I specialize (or so I would like to think) in systems programming.
+<br>
+<br>I graduated from University of Pune, India with a Masters Degree in Computer Science.
+I worked at Sybase Inc. as a Kernel Engineer for Sybase's flagship database called 'Adavptive Server Enterprise'
+<br>
+<br>Currently I am a graduate student at Carnegie Mellon University, studying Computer Science, Information Systems and Business.
 
-## You can catch me on
-
+### You can email me at: <img src="/img/bf52e1f6c7b552d4595872d1113a8c97.png"> 
+### or contact me on any of these:
 * [GitHub](https://github.com/Ghatage/)
 * [Twitter](http://twitter.com/ghatageanup)
+* [LinkedIn](http://linkedin.com/in/ghatageanup)

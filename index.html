@@ -3,35 +3,10 @@ layout: default
 title: Home
 ---
 
-<!--
-      <center> Archive </center>
+<h2> Hello. </h2>
+<p>My name is <strong>Anup Ghatage</strong>.
+<br>Grad student <a href="https://twitter.com/CarnegieMellon">@CarnegieMellon</a>, previously a Systems Developer III <a href="https://twitter.com/SAP">@SAP</a> 
+<br>I'm always looking for symmetry, poetry, beauty and meaning in code and life.
+<br>You can learn more about me <a href="http://www.ghatage.com/about/">here</a>.
+</p>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  	<div class="post-detail">
-  	  <h3 class="post-title-in-list">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="post-date-inline">{{ post.date | date_to_string }}</span>
-      </h3>
-    <span class="post-summary">{{post.summary}}</span>
-  	</div>
-
-  {% endfor %}
-</div>
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
--->
