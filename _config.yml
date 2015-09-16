@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:               Anup Ghatage
 tagline:             ""
-description:         "System Programming. Music. Illusions.<br> All kinds of new tech           ...and Butterscotch"
+description:         "System Programming. <br>Music. Illusions.<br> All kinds of new tech           ...and Butterscotch"
 url:                 http://www.ghatage.com
 baseurl:             /
 paginate:            100
