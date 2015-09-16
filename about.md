@@ -5,7 +5,10 @@ title: About
 
 Hey there! I'm Anup Ghatage. I love to code and to do sleight of hand magic.
 <br>I specialize (or so I would like to think) in systems programming.
-<br>Other areas of interest include: 
+<br>
+<br> You can find my resume <a href="/public/Anup_Ghatage.pdf">here</a>.
+<br>
+<br>My areas of interest include: 
 <br> `distributed systems`, `high availability` and `database internals`
 <br>I have also dabbled in `compiler internals` and `computer vision`
 <br>Yes, I am all over the place.
