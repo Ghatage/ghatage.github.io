@@ -7,7 +7,7 @@ date: 2015-06-05
 font-size: 10
 ---
 
-I had travelled to meet my Aunt for the 4th of July weekend in 2015. It was my first time out. <br>
+I had travelled to meet my Aunt for the 4th of July weekend in 2015.<br>
 As soon as the celebrations were over, I decided to head back a day earlier and spend it in New York City.<br>
 We've all heard and seen so much about it from the news, TV shows, Movies and Pop culture in general.<br>
 THE point of entry to the new world. I had one day, flat sole shows, a back pack and $10 to spare. (Poor grad student and all)<br>
