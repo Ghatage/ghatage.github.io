@@ -2,18 +2,30 @@
 layout: default
 title: Blog
 ---
-
- <center> Archive </center>
+<strong><h1>Archive</h1></strong>
+Browse by <a style="color:#8A2908" href="/blog/category/">Category</a> or <a style="color:orange" href="/blog/tag/">Tag</a>
 
 <div class="posts">
   {% for post in paginator.posts %}
   	<div class="post-detail">
-  	  <h3 class="post-title-in-list">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="post-date-inline">{{ post.date | date_to_string }}</span>
-      </h3>
-    <span class="post-summary">{{post.summary}}</span>
-  	</div>
+  	
+	<h3 class="post-title-in-list">
+		<a href="{{ post.url }}">{{ post.title }}</a>
+      		<span style="font-size: 15pt" class="post-date-inline">{{ post.date | date_to_string }}</span>
+      	</h3>
 
+    	<span style="font-size: 15pt" class="post-summary">
+		{{post.summary}}
+            <strong> | </strong>
+		{% if post.category != empty %}
+		[<a style="color:#8A2908" class="codinfox-tag-mark" href="/blog/category/#{{ category | slugify }}"> {{post.category}} </a>]
+		{% endif %}
+		{% if post.tags != empty %}
+            		{% for tag in post.tags %}
+            			<a style="color:orange" class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+            		{% endfor %}
+            	{% endif %}
+	</span>
+	</div>
   {% endfor %}
 </div>

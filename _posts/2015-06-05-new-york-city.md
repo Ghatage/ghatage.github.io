@@ -5,6 +5,8 @@ summary: First time in the Big Apple
 comments: true
 date: 2015-06-05
 font-size: 10
+category: travel
+tags: [nyc]
 ---
 
 I had travelled to meet my Aunt for the 4th of July weekend in 2015.<br>

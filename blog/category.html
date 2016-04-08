@@ -1,0 +1,89 @@
+---
+layout:   default
+title:    Categories
+---
+{% comment%}
+Here we generate all the categories.
+{% endcomment%}
+
+{% assign rawcats = "" %}
+{% for post in site.posts %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+
+{% assign rawcats = rawcats | split:'|' | sort %}
+
+{% assign cats = "" %}
+
+{% for cat in rawcats %}
+{% if cat != "" %}
+
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<h1 style="display:inline" class="page-title"> {{ page.title }} </h1>
+| <a href="/blog">Back to the Archive</a> 
+
+
+<div class="posts">
+<p>
+{% for ct in cats %}
+<a href="#{{ ct | slugify }}" class="codinfox-category-mark" style="color:#8A2908;"> {{ ct }} </a> &nbsp;&nbsp;
+{% endfor %}
+<a href="#no-category" class="codinfox-category-mark" style="color:#8A2908;"> No Category </a> &nbsp;&nbsp;
+</p>
+
+{% for ct in cats %}
+<h5 id="{{ ct | slugify }}">{{ ct }}</h5>
+<ul class="codinfox-category-list">
+  {% for post in site.posts %}
+  {% if post.category contains ct %}
+  <li>
+    <h5>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+      <span style="font-size:10pt;">
+      {% for tag in post.tags %}
+      <a style="color:orange" class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+      </span>
+    </h5>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+<hr style="height:1pt; visibility:hidden;" />
+{% endfor %}
+
+<h5 id="no-category">Uncategorized</h5>
+<ul class="codinfox-category-list">
+  {% for post in site.posts %}
+  {% unless post.category %}
+  <li>
+    <h5>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      <span style="font-size:10pt;">
+      </a>
+      {% for tag in post.tags %}
+      <a style="color:orange" class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+      </span>
+    </h5>
+  </li>
+  {% endunless %}
+<hr style="height:1pt; visibility:hidden;" />
+  {% endfor %}
+</ul>
+
+</div>
+

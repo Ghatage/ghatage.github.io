@@ -2,7 +2,6 @@
 layout: page
 title: About
 ---
-
 Hey there! I'm Anup Ghatage. I love to code and to do sleight of hand magic.
 <br>I specialize (or so I would like to think) in systems programming.
 <br>
@@ -18,8 +17,8 @@ Hey there! I'm Anup Ghatage. I love to code and to do sleight of hand magic.
 <br>
 <br>Currently I am a graduate student at Carnegie Mellon University, studying Computer Science, Information Systems and Business.
 
-### You can email me at: <img src="/img/bf52e1f6c7b552d4595872d1113a8c97.png"> 
-### or contact me on any of these:
+###### Email me at: <img src="/img/bf52e1f6c7b552d4595872d1113a8c97.png"> 
+###### or contact me on any of these:
 * [GitHub](https://github.com/Ghatage/)
 * [Twitter](http://twitter.com/ghatageanup)
 * [LinkedIn](http://linkedin.com/in/ghatageanup)

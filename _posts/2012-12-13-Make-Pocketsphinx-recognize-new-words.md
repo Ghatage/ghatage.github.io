@@ -4,6 +4,8 @@ title: Make Pocketsphinx recognize new words
 summary: Evolve your voice recognizer program
 comments: true
 date: 2012-12-13
+category: tech
+tags: [pocketsphinx]
 ---
 Now that we’ve got [pocketsphinx installed and running](http://ghatage.com/2012/09/16/voice-to-text-pocketsphinx/), we’d like for it to recognize the words we want it to.
 By default, the vocabulary and the dictionary it has may not cut it. in fact, if you’ve tried pocketsphinx_continuous you’ll understand that it cannot recognize half of the words you say.

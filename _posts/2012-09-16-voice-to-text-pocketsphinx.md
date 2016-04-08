@@ -4,6 +4,8 @@ title: Voice to text using CMU Pocketsphinx
 summary: Make your own voice to text program
 comments: true
 date: 2012-09-16
+category: tech
+tags: [pocketsphinx]
 ---
 We’ll need to install a bunch of things to get this working.
 
