@@ -4,7 +4,7 @@
  <title>Panopticon</title>
  <link href="https://twitter.com/ghatageanup/atom.xml" rel="self"/>
  <link href="https://twitter.com/ghatageanup/"/>
- <updated>2016-04-08T03:12:31-04:00</updated>
+ <updated>2017-10-27T11:18:35-07:00</updated>
  <id>https://twitter.com/ghatageanup</id>
  <author>
    <name></name>
@@ -15,7 +15,7 @@
  <entry>
    <title>New York City</title>
    <link href="https://twitter.com/ghatageanup/travel/2015/06/05/new-york-city/"/>
-   <updated>2015-06-05T00:00:00-04:00</updated>
+   <updated>2015-06-05T00:00:00-07:00</updated>
    <id>https://twitter.com/ghatageanup/travel/2015/06/05/new-york-city</id>
    <content type="html">&lt;p&gt;I had travelled to meet my Aunt for the 4th of July weekend in 2015.&lt;br&gt;
 As soon as the celebrations were over, I decided to head back a day earlier and spend it in New York City.&lt;br&gt;
@@ -83,7 +83,7 @@ As we headed back west in the night, I looked up at these man made wonders, prom
  <entry>
    <title>It's Alive!</title>
    <link href="https://twitter.com/ghatageanup/announcements/2015/03/28/its-alive/"/>
-   <updated>2015-03-28T00:00:00-04:00</updated>
+   <updated>2015-03-28T00:00:00-07:00</updated>
    <id>https://twitter.com/ghatageanup/announcements/2015/03/28/its-alive</id>
    <content type="html">&lt;p&gt;I used to blog from as early as 2007 on blogspot.
 &lt;br&gt;A few years ago I migrated to wordpress. (-_-)
@@ -100,7 +100,7 @@ Also hosting it on github pages is the icing on the cake.
  <entry>
    <title>Make Pocketsphinx recognize new words</title>
    <link href="https://twitter.com/ghatageanup/tech/2012/12/13/Make-Pocketsphinx-recognize-new-words/"/>
-   <updated>2012-12-13T00:00:00-05:00</updated>
+   <updated>2012-12-13T00:00:00-08:00</updated>
    <id>https://twitter.com/ghatageanup/tech/2012/12/13/Make-Pocketsphinx-recognize-new-words</id>
    <content type="html">&lt;p&gt;Now that we’ve got &lt;a href=&quot;http://ghatage.com/2012/09/16/voice-to-text-pocketsphinx/&quot;&gt;pocketsphinx installed and running&lt;/a&gt;, we’d like for it to recognize the words we want it to.
 By default, the vocabulary and the dictionary it has may not cut it. in fact, if you’ve tried pocketsphinx_continuous you’ll understand that it cannot recognize half of the words you say.&lt;/p&gt;
@@ -162,7 +162,7 @@ Here we’ll use the one given on the page.&lt;/p&gt;
  <entry>
    <title>Voice to text using CMU Pocketsphinx</title>
    <link href="https://twitter.com/ghatageanup/tech/2012/09/16/voice-to-text-pocketsphinx/"/>
-   <updated>2012-09-16T00:00:00-04:00</updated>
+   <updated>2012-09-16T00:00:00-07:00</updated>
    <id>https://twitter.com/ghatageanup/tech/2012/09/16/voice-to-text-pocketsphinx</id>
    <content type="html">&lt;p&gt;We’ll need to install a bunch of things to get this working.&lt;/p&gt;
 
