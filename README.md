@@ -1,1 +1,1 @@
-Personal website and blog.
+Repository for my homepage
